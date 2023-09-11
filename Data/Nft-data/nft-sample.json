@@ -1,0 +1,107 @@
+[
+    {
+        "id": 1,
+        "name": "Blast Gun",
+        "duration": 5,
+        "maxGroupSize": 5,
+        "difficulty": "easy",
+        "ratingsAverage": 4.5,
+        "ratingsQuantity": 35,
+        "price": 100,
+        "summary": "multiple fire bolts",
+        "description": "A conventional firearm uses a confined explosive charge to propel the bullet out of the gun  barrel. The hot, rapidly expanding gases cause an acoustic blast to emerge from the barrel. Theacoustic disturbance lasts 3-5 milliseconds and propagates through the air at the speed of sound.",
+        "imageCover": "img2.jpg",
+        "images": [
+            "img2-1.jpg",
+            "img2-2.jpg"
+        ],
+        "startDates": [
+            "2023-08-26",
+            "2023-08-27"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Range Gun",
+        "duration": 5,
+        "maxGroupSize": 5,
+        "difficulty": "easy",
+        "ratingsAverage": 4.5,
+        "ratingsQuantity": 35,
+        "price": 150,
+        "summary": "Close Range bolts",
+        "description": "Compact semi-automatic pistol with a 10-round capacity, ideal for close-range self-defense and concealed carry.",
+        "imageCover": "img3.jpg",
+        "images": [
+            "img3-1.jpg",
+            "img3-2.jpg"
+        ],
+        "startDates": [
+            "2023-08-26",
+            "2023-08-27"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Machine Gun",
+        "duration": 5,
+        "maxGroupSize": 5,
+        "difficulty": "easy",
+        "ratingsAverage": 4.0,
+        "ratingsQuantity": 45,
+        "price": 200,
+        "summary": "multiple fire bolts",
+        "description": "High-capacity fully automatic firearm, designed for rapid and continuous firing, commonly used by military forces.",
+        "imageCover": "img4.jpg",
+        "images": [
+            "img4-1.jpg",
+            "img4-2.jpg",
+            "img4-3.jpg"
+        ],
+        "startDates": [
+            "2023-08-26",
+            "2023-08-27",
+            "2023-08-28"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Gold Rifle",
+        "duration": 2,
+        "maxGroupSize": 2,
+        "difficulty": "medium",
+        "ratingsAverage": 4.7,
+        "ratingsQuantity": 25,
+        "price": 350,
+        "summary": "Automatic bolts",
+        "description": "Elegant rifle with gold accents, blending aesthetics and performance for a unique and stylish shooting experience.",
+        "imageCover": "img5.jpg",
+        "images": [
+            "img5-1.jpg",
+            "img5-2.jpg"
+        ],
+        "startDates": [
+            "2023-08-26"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Lazer Rifle",
+        "duration": 2,
+        "maxGroupSize": 2,
+        "difficulty": "medium",
+        "ratingsAverage": 4.6,
+        "ratingsQuantity": 15,
+        "price": 450,
+        "summary": "Automatic bolts",
+        "description": "Elegant rifle with bright lazer accents, blending aesthetics and performance for a unique and stylish shooting experience.",
+        "imageCover": "img6.jpg",
+        "images": [
+            "img6-1.jpg",
+            "img6-2.jpg"
+        ],
+        "startDates": [
+            "2023-08-28"
+        ]
+    }
+]
