@@ -30,7 +30,7 @@ const importData = async () => {
     }
 };
 
-//IMPORT DATA
+//DELETE DATA
 const deleteData = async () => {
     try {
         await NFT.deleteMany();

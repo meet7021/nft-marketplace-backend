@@ -1,11 +1,18 @@
+//import cors from "cors"
+
 const express = require("express");
 const morgan = require("morgan");
+const cors = require("cors")
+
+
 
 const nftsRouter = require("./routes/nftsRoute");
 const usersRouter = require("./routes/usersRoute");
 
 const app = express();
 app.use(express.json());
+
+app.use(cors())
 
 if (process.env.NODE_ENV === "development") {
     app.use(morgan("dev"));

@@ -1,8 +1,15 @@
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const app = require("./app");
+//
+// const cors = require("cors")
+//
 
 //console.log(app.get("env"));
+
+//
+// app.use(cors())
+//
 
 dotenv.config({ path: "./config.env" });
 
@@ -26,13 +33,15 @@ mongoose.connect(DB, {
 //     price: 100,
 // })
 
+
+
 // testNFT.save().then(docNFT => {
 //     console.log(docNFT)
 // }).catch((error) => {
 //     console.log("ERROR:", error);
 // });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, () => {
     console.log(`App running on port ${port}...`);
 });

@@ -149,7 +149,7 @@ exports.getAllNfts = async (req, res) => {
         // const sort = {};
         const query = NFT.find(JSON.parse(queryStr));
 
-        //SORTING METHOD
+        // SORTING METHOD
         // if (req.query.sort) {
         //     const sortBy = req.query.sort.split(",").join(" ");
         //     console.log(sortBy);
@@ -159,7 +159,7 @@ exports.getAllNfts = async (req, res) => {
         //     query = query.sort("-createdAt");
         // }
 
-        //Fields Limiting
+        // //Fields Limiting
         // if (req.query.fields) {
         //     const fields = req.query.fields.split(",").json(" ");
         //     query = query.select(fields);
