@@ -6,6 +6,15 @@ const nftControllers = require("./../Controller/nftController")
 const router = express.Router();
 //router.param("id", nftControllers.checkId);
 
+//TOP 5 NFTs by price
+router.route("/top-5-nfts").get(nftControllers.aliasTopNFTs, nftControllers.getAllNfts)
+
+//STATS ROUTE
+
+router.route("/nfts-stats").get(nftControllers.getNFtsStats);
+
+router.route("/monthly-plan/:year").get(nftControllers.getMonthlyPlan);
+
 //***REFACTORED CODE -> ROUTER NFT***/
 
 router.route('/').get(nftControllers.getAllNfts)
