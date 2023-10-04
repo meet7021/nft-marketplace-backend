@@ -1,11 +1,16 @@
 const mongoose = require("mongoose");
 const slugify = require("slugify");
+const validator = require("validator");
 
 const nftSchema = new mongoose.Schema({
     name: {
         type: String,
         required: [true, "A nft must have a name"],
         unique: true,
+        trim: true,
+        maxlength: [40, "nft must have 50 character"],
+        minlength: [2, "nft must have atleast 1 character"],
+        //validate: [validator.isAlpha, "Nft name must contain only characters"]
     },
     slug: String,
     duration: {
@@ -19,10 +24,16 @@ const nftSchema = new mongoose.Schema({
     difficulty: {
         type: String,
         required: [true, "must have difficulty"],
+        enum: {
+            values: ["easy", "medium", "difficulty"],
+            message: "Difficulty is either: easy, medium and difficulty",
+        },
     },
     ratingsAverage: {
         type: Number,
         default: 4.5,
+        min: [1, "must have 1"],
+        max: [5, "must have 5"]
     },
     ratingsQuantity: {
         type: Number,
@@ -32,7 +43,15 @@ const nftSchema = new mongoose.Schema({
         type: Number,
         required: [true, "A nft must have a price"],
     },
-    priceDiscount: Number,
+    priceDiscount: {
+        type: Number,
+        validate: {
+            validator: function (val) {
+                return val < this.price
+            },
+            message: "Discount price ({VALUE}) should be below regular price",
+        },
+    },
     summary: {
         type: String,
         trim: true,
@@ -105,6 +124,14 @@ nftSchema.post(/^find/, function (doc, next) {
 // //     this.find({ secretNFTs: { $ne: true } });
 // //     next();
 // // })
+
+
+//Aggregate middleware
+nftSchema.pre("aggregate", function (next) {
+    this.pipeline().unshift({ $match: { secretNFTs: { $ne: true } } });
+    next();
+});
+
 
 const NFT = mongoose.model("NFT", nftSchema);
 
